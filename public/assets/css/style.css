@@ -1,0 +1,209 @@
+
+/* ==========================================
+   WAVE ADMIN - IDENTIDADE VISUAL OFICIAL
+   ========================================== */
+
+/* PALETA DE CORES */
+
+:root {
+    --roxo-escuro: #2c003e;
+    --roxo-medio: #7a1e78;
+    --rosa-neon: #ff00cc;
+    --roxo-vibrante: #ae00ff;
+    --rosa-coral: #ff5280;
+    --roxo-profundo: #34034b;
+    --branco: #ffffff;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--branco);
+}
+
+/* ==========================================
+   TELA DE LOGIN
+   ========================================== */
+
+body.login-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #2c003e 0%,
+        #7a1e78 50%,
+        #ff00cc 100%
+    );
+
+    background-attachment: fixed;
+    padding: 20px;
+}
+
+/* PAINEL DE LOGIN */
+
+.login-container {
+    width: 90%;
+    max-width: 420px;
+    padding: 40px;
+
+    background: rgba(52, 3, 75, 0.92);
+
+    border: 1px solid var(--roxo-vibrante);
+    border-radius: 18px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(10px);
+}
+
+/* LOGO */
+
+.wave-logo {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 5px;
+
+    color: var(--rosa-neon);
+
+    text-shadow: 0 0 15px rgba(255, 0, 204, 0.5);
+}
+
+/* SUBTÍTULO */
+
+.login-subtitle {
+    text-align: center;
+    color: var(--branco);
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+/* CAMPOS DO FORMULÁRIO */
+
+.form-label {
+    color: var(--branco);
+    font-weight: 500;
+}
+
+.form-control {
+    background: var(--roxo-escuro);
+    border: 1px solid var(--roxo-medio);
+
+    color: var(--branco);
+
+    padding: 12px;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    background: var(--roxo-escuro);
+    color: var(--branco);
+
+    border-color: var(--rosa-neon);
+
+    box-shadow: 0 0 0 3px rgba(255, 0, 204, 0.2);
+}
+
+.form-control::placeholder {
+    color: var(--branco);
+    opacity: 0.65;
+}
+
+/* BOTÃO PRINCIPAL */
+
+.btn-wave {
+    background: linear-gradient(
+        90deg,
+        var(--roxo-vibrante),
+        var(--rosa-neon),
+        var(--rosa-coral)
+    );
+
+    border: none;
+    border-radius: 8px;
+
+    color: var(--branco);
+
+    padding: 13px;
+
+    font-weight: bold;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.btn-wave:hover {
+    color: var(--branco);
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.1);
+
+    box-shadow: 0 5px 20px rgba(255, 0, 204, 0.3);
+}
+
+.btn-wave:active {
+    transform: scale(0.98);
+}
+
+/* MENSAGENS DE ERRO */
+
+.alert-danger {
+    background: rgba(255, 82, 128, 0.15);
+    border: 1px solid var(--rosa-coral);
+    color: var(--branco);
+    border-radius: 8px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
+
+@media (max-width: 480px) {
+
+    .login-container {
+        width: 100%;
+        padding: 28px 22px;
+    }
+
+    .wave-logo {
+        font-size: 34px;
+    }
+
+    .login-subtitle {
+        margin-bottom: 25px;
+    }
+}
+
+/* ==========================================
+   ESTILIZAÇÃO DA ROLAGEM
+   ========================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--roxo-escuro);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--roxo-vibrante);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--rosa-neon);
+}

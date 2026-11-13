@@ -1,0 +1,302 @@
+
+.usuarios-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2c003e 0%, #7a1e78 50%, #ff00cc 100%);
+    color: #ffffff;
+    padding: 35px 20px;
+}
+
+.usuarios-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.usuarios-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.usuarios-topo h1,
+.form-wave h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.usuarios-topo p,
+.form-wave p {
+    color: #f1d8f1;
+    margin-bottom: 0;
+}
+
+.usuarios-painel,
+.form-wave {
+    background: rgba(52, 3, 75, 0.94);
+    border: 1px solid rgba(255, 0, 204, 0.25);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.btn-wave {
+    display: inline-block;
+    border: none;
+    border-radius: 9px;
+    padding: 11px 18px;
+    color: #ffffff;
+    background: linear-gradient(90deg, #ae00ff, #ff00cc, #ff5280);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-wave:hover {
+    color: #ffffff;
+    filter: brightness(1.12);
+    transform: translateY(-1px);
+}
+
+.busca-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.busca-form input {
+    flex: 1;
+    min-width: 220px;
+}
+
+.busca-form input,
+.form-wave input,
+.form-wave select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #7a1e78;
+    border-radius: 8px;
+    background: #2c003e;
+    color: #ffffff;
+    outline: none;
+}
+
+.busca-form input:focus,
+.form-wave input:focus,
+.form-wave select:focus {
+    border-color: #ff00cc;
+    box-shadow: 0 0 0 3px rgba(255, 0, 204, 0.15);
+}
+
+.btn-voltar,
+.link-voltar {
+    color: #ff5280;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.btn-voltar:hover,
+.link-voltar:hover {
+    color: #ff00cc;
+}
+
+.tabela-wave {
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.tabela-wave thead th {
+    color: #ff5280;
+    border-bottom: 1px solid #7a1e78;
+    white-space: nowrap;
+}
+
+.tabela-wave td {
+    color: #ffffff;
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.status-wave {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status-wave.ativo {
+    background: rgba(0, 200, 120, 0.18);
+    color: #75f0b4;
+}
+
+.status-wave.bloqueado {
+    background: rgba(255, 82, 128, 0.18);
+    color: #ff8eaa;
+}
+
+.acoes-wave {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.acoes-wave form {
+    display: inline;
+}
+
+.acoes-wave button,
+.acoes-wave a {
+    border: 0;
+    border-radius: 6px;
+    padding: 6px 9px;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.acao-editar {
+    background: #7a1e78;
+    color: #ffffff;
+}
+
+.acao-status {
+    background: #ae00ff;
+    color: #ffffff;
+}
+
+.acao-excluir {
+    background: #ff5280;
+    color: #ffffff;
+}
+
+.form-wave-container {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wave {
+    width: 100%;
+    max-width: 520px;
+}
+
+.form-wave h1 {
+    margin-bottom: 8px;
+}
+
+.form-wave p {
+    margin-bottom: 25px;
+}
+
+.form-wave label {
+    display: block;
+    margin: 16px 0 7px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.form-wave .btn-wave {
+    margin-top: 25px;
+}
+
+.link-voltar {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+    .usuarios-page {
+        padding: 20px 12px;
+    }
+
+    .usuarios-painel {
+        padding: 15px;
+    }
+
+    .usuarios-topo h1 {
+        font-size: 23px;
+    }
+}
+
+
+/* ========================================
+   FILTRO DE STATUS - WAVE ADMIN
+======================================== */
+
+.busca-form select,
+.busca-form select.form-select {
+    display: block;
+    width: auto !important;
+    min-width: 190px;
+    height: 48px;
+
+    padding: 12px 38px 12px 16px !important;
+
+    background-color: #34034b !important;
+    color: #ffffff !important;
+
+    border: 1px solid #ae00ff !important;
+    border-radius: 9px !important;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+    outline: none;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23ff5280' stroke-width='2' d='m3 6 5 5 5-5'/%3E%3C/svg%3E") !important;
+
+    background-repeat: no-repeat !important;
+    background-position: right 14px center !important;
+    background-size: 14px !important;
+}
+
+/* Opções */
+.busca-form select option {
+    background-color: #34034b !important;
+    color: #ffffff !important;
+}
+
+/* Ao selecionar ou clicar */
+.busca-form select:focus {
+    border-color: #ff00cc !important;
+    box-shadow: 0 0 0 3px rgba(255, 0, 204, 0.20) !important;
+}
+
+/* Ao passar o mouse */
+.busca-form select:hover {
+    border-color: #ff5280 !important;
+}
+
+/* Campo de biografia - Wave Admin */
+
+.form-wave textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #7a1e78;
+    border-radius: 8px;
+    background: #2c003e;
+    color: #ffffff;
+    outline: none;
+    resize: vertical;
+}
+
+.form-wave textarea:focus {
+    border-color: #ff00cc;
+    box-shadow: 0 0 0 3px rgba(255, 0, 204, 0.15);
+}
+
+.form-wave textarea::placeholder {
+    color: #d8b6df;
+}
+
